@@ -2,118 +2,110 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Magazin Alix - Tricouri & Hanorace</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ALIX SHOP</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-    }
-
-    header {
-      background-color: #222;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    h1 {
-      margin: 0;
-    }
-
-    .produse {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      padding: 40px 20px;
-    }
-
-    .produs {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 20px;
-      width: 250px;
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .produs:hover {
-      transform: translateY(-5px);
-    }
-
-    .produs img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-
-    .produs h3 {
-      margin: 15px 0 5px;
-    }
-
-    .produs p {
-      color: #333;
-      font-size: 16px;
-    }
-
-    .produs button {
-      margin-top: 10px;
-      background: #0077cc;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .produs button:hover {
-      background: #005fa3;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #222;
-      color: white;
-      margin-top: 50px;
-    }
+    body { margin:0; padding:0; font-family:Arial; background:#111; color:#eee; }
+    header { background:#000; padding:20px; text-align:center; }
+    .lang-switch { position:absolute; top:20px; right:20px; }
+    .produse { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; padding:20px;}
+    .produs { background:#222; padding:15px; width:260px; border-radius:8px; }
+    .produs img { width:100%; border-radius:6px; }
+    label, select, input { width:100%; margin:5px 0; }
+    button { width:100%; padding:10px; background:#f60; border:none; color:#fff; cursor:pointer;}
+    button:hover { background:#e55; }
+    footer { background:#000; color:#888; text-align:center; padding:15px; }
+    .info { padding:20px; background:#222; margin:10px;}
   </style>
 </head>
 <body>
   <header>
-    <h1>Magazin Alix</h1>
-    <p>Tricouri, Hanorace și Bluze cu Imprimeu</p>
+    <h1>ALIX SHOP</h1>
+    <div class="lang-switch"><a href="#">RO</a> | <a href="#">EN</a></div>
   </header>
 
   <section class="produse">
+    <!-- 1 Tricou VLONE -->
     <div class="produs">
-      <img src="https://images.unsplash.com/photo-1585386959984-a4155228f6f1?auto=format&fit=crop&w=600&q=80" alt="Tricou Urban">
-      <h3>Tricou Urban</h3>
-      <p>Preț: 99 RON</p>
-      <button>Comandă</button>
+      <img src="https://images.openai.com/thumbnails/url/497acnicu1mSUVJSUGylr5-al1xUWVCSmqJbkpRnoJdeXJJYkpmsl5yfq5-Zm5ieWmxfaAuUsXL0S7F0Tw4qcckMKE4yS3QODPANCErMDTW3DPYJz4p3KggPz_aPzK-yTIs3N7YsLvKJyMpODi0o9zd3C3DKz47wD1QrBgAeZCoP" alt="Tricou VLONE">
+      <h3>Tricou VLONE</h3><p>89,99 lei</p>
+      <label>Mărime<select><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option><option>XXXL</option></select></label>
+      <label>Culoare<select><option>Alb</option><option>Negru</option></select></label>
+      <label>Imprimare<input type="file" accept="image/*"></label>
+      <button onclick="addToCart('Tricou VLONE',89.99)">Adaugă în coș</button>
     </div>
-
+    <!-- 2 Hanorac VLONE -->
     <div class="produs">
-      <img src="https://images.unsplash.com/photo-1618354691263-97ee7c9c2304?auto=format&fit=crop&w=600&q=80" alt="Hanorac Galaxy">
-      <h3>Hanorac Galaxy</h3>
-      <p>Preț: 159 RON</p>
-      <button>Comandă</button>
+      <img src="https://images.openai.com/thumbnails/url/I-W5SHicu1mSUVJSUGylr5-al1xUWVCSmqJbkpRnoJdeXJJYkpmsl5yfq5-Zm5ieWmxfaAuUsXL0S7F0Tw4pKKmq8C0vSg8vCc9Od08qNvNMdwotKiswSC5ODDI3dw2LMM5PLU1OT3QJS0nzy3VPDwr3zgn298s1dFQrBgBZISr6" alt="Hanorac VLONE">
+      <h3>Hanorac VLONE</h3><p>100 lei</p>
+      <label>Mărime<select><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option><option>XXXL</option></select></label>
+      <label>Culoare<select><option>Alb</option><option>Negru</option></select></label>
+      <label>Imprimare<input type="file" accept="image/*"></label>
+      <button onclick="addToCart('Hanorac VLONE',100)">Adaugă în coș</button>
     </div>
-
+    <!-- 3 Pantaloni lungi VLONE -->
     <div class="produs">
-      <img src="https://images.unsplash.com/photo-1602810318360-d291fbc669af?auto=format&fit=crop&w=600&q=80" alt="Bluza Neon Vibes">
-      <h3>Bluza Neon Vibes</h3>
-      <p>Preț: 129 RON</p>
-      <button>Comandă</button>
+      <img src="https://images.openai.com/thumbnails/url/r8eQ8Xicu1mUUVJSUGylr5-al1xUWVCSmqJbkpRnoJdeXJJYkpmsl5yfq5-Zm5ieWmxfaAuUsXL0S7F0Tw4szTLSNS7IKcrNcXRNizJLNfPMMCj1K8yvqIgqTkvKDohy8tdNdPc0CkrzMUkNDDEP8TNLrXTWLchUKwYAy5YpBg" alt="Pantaloni lungi VLONE">
+      <h3>Pantaloni lungi VLONE</h3><p>100 lei</p>
+      <label>Mărime<select><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option><option>XXXL</option></select></label>
+      <label>Culoare<select><option>Alb</option><option>Negru</option></select></label>
+      <label>Imprimare<input type="file" accept="image/*"></label>
+      <button onclick="addToCart('Pantaloni lungi VLONE',100)">Adaugă în coș</button>
+    </div>
+    <!-- 4 Pantaloni scurți VLONE -->
+    <div class="produs">
+      <img src="https://images.openai.com/thumbnails/url/drcT5nicu1mSUVJSUGylr5-al1xUWVCSmqJbkpRnoJdeXJJYkpmsl5yfq5-Zm5ieWmxfaAuUsXL0S7F0Tw5OTDUJSc7wdY4IN85K9PD1CPbMcQ32Dc118_FMDvfOKcgvDgwwyDDzDS3IyAn1SzLzCtLTis0rfR1S1crBgAVMyoc" alt="Pantaloni scurți VLONE">
+      <h3>Pantaloni scurți VLONE</h3><p>89,99 lei</p>
+      <label>Mărime<select><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option><option>XXXL</option></select></label>
+      <label>Culoare<select><option>Alb</option><option>Negru</option></select></label>
+      <label>Imprimare<input type="file" accept="image/*"></label>
+      <button onclick="addToCart('Pantaloni scurți VLONE',89.99)">Adaugă în coș</button>
+    </div>
+    <!-- 5 Compleu de vară VLONE -->
+    <div class="produs">
+      <img src="https://images.openai.com/thumbnails/url/497acnicu1mSUVJSUGylr5-al1xUWVCSmqJbkpRnoJdeXJJYkpmsl5yfq5-Zm5ieWmxfaAuUsXL0S7F0Tw4qcckMKE4yS3QODPANCErMDTW3DPYJz4p3KggPz_aPzK-yTIs3N7YsLvKJyMpODi0o9zd3C3DKz47wD1QrBgAeZCoP" alt="Compleu de vară VLONE">
+      <h3>Compleu vară VLONE</h3><p>159,99 lei</p>
+      <label>Mărime<select><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option><option>XXXL</option></select></label>
+      <label>Culoare<select><option>Alb</option><option>Negru</option></select></label>
+      <label>Imprimare<input type="file" accept="image/*"></label>
+      <button onclick="addToCart('Compleu vară VLONE',159.99)">Adaugă în coș</button>
     </div>
   </section>
 
-  <footer>
-    &copy; 2025 Magazin Alix. Toate drepturile rezervate.
-  </footer>
+  <!-- Coș și formular Ascuns -->
+  <section id="checkout" class="info">
+    <h2>Coș de cumpărături</h2>
+    <div id="cartList">Coș gol</div>
+    <p><strong>Total:</strong> <span id="total">0</span> lei</p>
+    <form action="https://formsubmit.co/mateusalix3@gmail.com" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="_subject" value="Comandă ALIX SHOP">
+      <div><label>Nume<input type="text" name="Nume" required></label></div>
+      <div><label>Email<input type="email" name="Email" required></label></div>
+      <div><label>Telefon<input type="text" name="Telefon" required></label></div>
+      <div><label>Adresă<input type="text" name="Adresă" required></label></div>
+      <textarea name="Comandă" hidden id="orderDetails"></textarea>
+      <button type="submit">Trimite comanda</button>
+    </form>
+  </section>
+
+  <!-- Informații -->
+  <section class="info">
+    <h3>Retur</h3><p>Poți returna produsul în 14 zile de la primire.</p>
+    <h3>Plată la curier</h3><p>Plata se face în momentul livrării.</p>
+    <h3>Recenzii</h3><p>Clienții noștri spun: “Calitate foarte bună!”</p>
+  </section>
+
+  <footer>&copy; 2025 ALIX SHOP</footer>
+
+  <script>
+    let cart = [], total = 0;
+    function addToCart(name, price) {
+      cart.push({name, price});
+      total += price;
+      document.getElementById('cartList').innerText = cart.map(c=>c.name+' - '+c.price+' lei').join('\\n');
+      document.getElementById('total').innerText = total.toFixed(2);
+      document.getElementById('orderDetails').value = cart.map(c=>c.name + ' ('+c.price+' lei)').join(', ');
+    }
+  </script>
 </body>
 </html>
