@@ -3,89 +3,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Magazin Matei - Comandă</title>
+  <title>Magazin Alix - Tricouri & Hanorace</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f0f0f0;
       margin: 0;
-      padding: 20px;
+      padding: 0;
+      background: #f9f9f9;
     }
-    h1 {
-      color: #2c3e50;
+
+    header {
+      background-color: #222;
+      color: white;
+      padding: 20px;
       text-align: center;
     }
-    .container {
-      background: #fff;
+
+    h1 {
+      margin: 0;
+    }
+
+    .produse {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+    }
+
+    .produs {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       padding: 20px;
-      max-width: 600px;
-      margin: auto;
+      width: 250px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .produs:hover {
+      transform: translateY(-5px);
+    }
+
+    .produs img {
+      width: 100%;
+      height: auto;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    label {
-      font-weight: bold;
-      margin-top: 10px;
-      display: block;
+
+    .produs h3 {
+      margin: 15px 0 5px;
     }
-    input, select, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      margin-bottom: 15px;
-    }
-    button {
-      background: #27ae60;
-      color: white;
-      padding: 12px;
-      border: none;
-      width: 100%;
-      border-radius: 5px;
+
+    .produs p {
+      color: #333;
       font-size: 16px;
     }
-    button:hover {
-      background: #1e8449;
+
+    .produs button {
+      margin-top: 10px;
+      background: #0077cc;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .produs button:hover {
+      background: #005fa3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: white;
+      margin-top: 50px;
     }
   </style>
 </head>
 <body>
-  <h1>Magazinul lui Matei</h1>
-  <div class="container">
-    <h2>Produse disponibile:</h2>
-    <ul>
-      <li><strong>Nike Air Force 1</strong> – 450 RON</li>
-      <li><strong>Jordan 4</strong> – 750 RON</li>
-      <li><strong>Alexander McQueen</strong> – 850 RON</li>
-    </ul>
-    
-    <h2>Formular de comandă</h2>
-    <form action="https://formsubmit.co/mateusalix3@gmail.com" method="POST">
-      <label for="nume">Nume:</label>
-      <input type="text" id="nume" name="nume" required>
+  <header>
+    <h1>Magazin Alix</h1>
+    <p>Tricouri, Hanorace și Bluze cu Imprimeu</p>
+  </header>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+  <section class="produse">
+    <div class="produs">
+      <img src="https://images.unsplash.com/photo-1585386959984-a4155228f6f1?auto=format&fit=crop&w=600&q=80" alt="Tricou Urban">
+      <h3>Tricou Urban</h3>
+      <p>Preț: 99 RON</p>
+      <button>Comandă</button>
+    </div>
 
-      <label for="telefon">Telefon:</label>
-      <input type="text" id="telefon" name="telefon" required>
+    <div class="produs">
+      <img src="https://images.unsplash.com/photo-1618354691263-97ee7c9c2304?auto=format&fit=crop&w=600&q=80" alt="Hanorac Galaxy">
+      <h3>Hanorac Galaxy</h3>
+      <p>Preț: 159 RON</p>
+      <button>Comandă</button>
+    </div>
 
-      <label for="produs">Produs dorit:</label>
-      <select id="produs" name="produs">
-        <option>Nike Air Force 1</option>
-        <option>Jordan 4</option>
-        <option>Alexander McQueen</option>
-      </select>
+    <div class="produs">
+      <img src="https://images.unsplash.com/photo-1602810318360-d291fbc669af?auto=format&fit=crop&w=600&q=80" alt="Bluza Neon Vibes">
+      <h3>Bluza Neon Vibes</h3>
+      <p>Preț: 129 RON</p>
+      <button>Comandă</button>
+    </div>
+  </section>
 
-      <label for="marime">Mărime:</label>
-      <input type="text" id="marime" name="marime">
-
-      <label for="observatii">Observații:</label>
-      <textarea id="observatii" name="observatii" rows="4"></textarea>
-
-      <button type="submit">Trimite Comanda</button>
-    </form>
-  </div>
+  <footer>
+    &copy; 2025 Magazin Alix. Toate drepturile rezervate.
+  </footer>
 </body>
-	</html>
+</html>
